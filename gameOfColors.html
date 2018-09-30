@@ -7,163 +7,162 @@
 		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	</head>
 	<body>
-	<style>
-.region {
-    background-color: #999;
-    margin: 10px;
-    width: 75px;
-    height: 75px;
-}
+		<style>
+			.region {
+				background-color: #999;
+				margin: 10px;
+				width: 75px;
+				height: 75px;
+			}
 
-.bounded {
-    border: 2px solid black;
-}
+			.bounded {
+				border: 2px solid black;
+			}
 
-.yellow { 
-    background-color: yellow; 
-	fill: rgb(255, 215, 0);
-}
+			.yellow { 
+				background-color: yellow; 
+				fill: rgb(255, 215, 0);
+			}
 
-.red { 
-    background-color: red;
-	fill: #ED6E46;
-}
+			.red { 
+				background-color: red;
+				fill: #ED6E46;
+			}
 
-.blue { 
-    background-color: blue; 
-	fill: rgb(32, 178, 170);
-}
+			.blue { 
+				background-color: blue; 
+				fill: rgb(32, 178, 170);
+			}
 
-.green { 
-    background-color: green; 
-	fill: #BBC42A;
-}
+			.green { 
+				background-color: green; 
+				fill: #BBC42A;
+			}
 
-.espresso {
-	fill: rgb(139, 69, 19, 0.8);
-}
+			.espresso {
+				fill: rgb(139, 69, 19, 0.8);
+			}
 
-.milk {
-	fill: rgb(255, 255, 240, 0.8);
-}
+			.milk {
+				fill: rgb(255, 255, 240, 0.8);
+			}
 
-.honey {
-	fill: rgb(218, 165, 32, 0.8);
-}
+			.honey {
+				fill: rgb(218, 165, 32, 0.8);
+			}
 
-.orangeJuice {
-	fill: rgb(244, 164, 96, 0.8);
-}
+			.orangeJuice {
+				fill: rgb(244, 164, 96, 0.8);
+			}
 
-.mint {
-	fill: rgb(245, 255, 250, 0.8);
-}
+			.mint {
+				fill: rgb(245, 255, 250, 0.8);
+			}
 
-.chocolate {
-	fill: rgb(222, 184, 135);
-}
+			.chocolate {
+				fill: rgb(222, 184, 135);
+			}
 
-.el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-	font-family: Lato;
-  }
+			.el-header, .el-footer {
+				background-color: #B3C0D1;
+				color: #333;
+				text-align: center;
+				line-height: 60px;
+				font-family: Lato;
+			  }
+			  
+			.el-header {
+				font-size: 20px;
+			}
   
-.el-header {
-  	font-size: 20px;
-}
+			.el-aside {
+				background-color: #D3DCE6;
+				color: #333;
+				text-align: center;
+				line-height: 30px;
+				font-family: Lato;
+			}
+			  
+			.el-main {
+				background-color: #E9EEF3;
+				color: #333;
+				text-align: center;
+				line-height: 160px;
+				font-family: Lato;
+			}
   
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 30px;
-	font-family: Lato;
-  }
+			body > .el-container {
+				margin-bottom: 40px;
+			}
   
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-	font-family: Lato;
-  }
+			.el-container:nth-child(5) .el-aside,
+			.el-container:nth-child(6) .el-aside {
+				line-height: 260px;
+			}
   
-  body > .el-container {
-    margin-bottom: 40px;
-  }
-  
-  .el-container:nth-child(5) .el-aside,
-  .el-container:nth-child(6) .el-aside {
-    line-height: 260px;
-  }
-  
-.el-container:nth-child(7) .el-aside {
-	line-height: 320px;
-}
-</style>
+			.el-container:nth-child(7) .el-aside {
+				line-height: 320px;
+			}
+		</style>
 
-<el-container id='app'>
-  <el-header>Choose your drink!</el-header>
-  <el-container>
-    <el-aside width="200px">
-		<el-input type='text' placeholder="base of drink" v-model="first"></el-input>
-		<br>
-		<el-input type='text' placeholder="second one" v-model="second"></el-input>
-		<br>
-		<el-input type='text' placeholder="what else" v-model="third"></el-input>
-		<br>
-		<el-input type='text' placeholder="additional element" v-model="fourth"></el-input>
-		<br>
-		<el-input type='text' placeholder="smth else" v-model="fifth"></el-input>
-		<br>
-		<el-input type='text' placeholder="final accent" v-model="sixth"></el-input>
-		<br>
-		<el-button type="success" plain v-on:click="ready=!ready">It's ready</el-button>
-	</el-aside>
-    <el-container>
-      <el-main>
-		<svg width="500" height="300">
+		<el-container id='app'>
+			<el-header>Choose your drink!</el-header>
+				<el-container>
+					<el-aside width="200px">
+						<el-input type='text' placeholder="base of drink" v-model="first"></el-input>
+						<br>
+						<el-input type='text' placeholder="second one" v-model="second"></el-input>
+						<br>
+						<el-input type='text' placeholder="what else" v-model="third"></el-input>
+						<br>
+						<el-input type='text' placeholder="additional element" v-model="fourth"></el-input>
+						<br>
+						<el-input type='text' placeholder="smth else" v-model="fifth"></el-input>
+						<br>
+						<el-input type='text' placeholder="final accent" v-model="sixth"></el-input>
+						<br>
+						<el-button type="success" plain v-on:click="ready=!ready">It's ready</el-button>
+					</el-aside>
+					<el-container>
+						<el-main>
+							<svg width="500" height="300">
+								<g class='plate' v-if='ready'>	
+									<ellipse cx='80' cy='230' rx='70' ry='30' fill='#BBC42A'/>
+								</g>
 		
-		<g class='plate' v-if='ready'>	
-		<ellipse cx='80' cy='230' rx='70' ry='30' fill='#BBC42A'/>
-		</g>
+								<g class='glass'>
+									<rect y='40' x='30' width='100' height='200' rx='45' ry='20' fill='rgb(100, 149, 237, 0.4)'/>
+									<path fill="none" stroke='rgb(100, 149, 237, 0.4)' stroke-width="8" d="M130,195 C190,75 130,5 130,95" />
+								</g>
+
+								<rect width='100' height='50' rx='45' ry='20' y='190' x='30' fill='rgb(139, 69, 19, 0)' v-bind:class="first"/>
+
+								<rect width='100' height='50' rx='45' ry='20' y='170' x='30' fill='rgb(255, 248, 220, 0)' v-bind:class="second"/>
+
+								<rect width='100' height='50' rx='45' ry='20' y='150' x='30' fill='rgb(240, 255, 240, 0)' v-bind:class="third"/>
+
+								<rect width='100' height='50' rx='45' ry='20' y='130' x='30' fill='rgb(245, 222, 179, 0)' v-bind:class="fourth"/>
+
+								<rect width='100' height='50' rx='45' ry='20' y='110' x='30' fill='rgb(245, 245, 245, 0)' v-bind:class="fifth"/>
+
+								<rect width='100' height='50' rx='45' ry='20' y='90' x='30' fill='rgb(188, 143, 143, 0)' v-bind:class="sixth"/>
 		
-		<g class='glass'>
-		<rect y='40' x='30' width='100' height='200' rx='45' ry='20' fill='rgb(100, 149, 237, 0.4)'/>
-		<path fill="none" stroke='rgb(100, 149, 237, 0.4)' stroke-width="8" d="M130,195 C190,75 130,5 130,95" />
-		</g>
+								<g class='steam' v-if='ready'>
+									<ellipse cx='80' cy='10' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
+									<ellipse cx='60' cy='10' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
+									<ellipse cx='80' cy='30' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
+									<ellipse cx='80' cy='40' rx='10' ry='5' fill='rgb(211, 211, 211, 0.5)'/>
+									<ellipse cx='60' cy='20' rx='10' ry='5' fill='rgb(211, 211, 211, 0.5)'/>
+								</g>
 
-		<rect width='100' height='50' rx='45' ry='20' y='190' x='30' fill='rgb(139, 69, 19, 0)' v-bind:class="first"/>
-
-		<rect width='100' height='50' rx='45' ry='20' y='170' x='30' fill='rgb(255, 248, 220, 0)' v-bind:class="second"/>
-
-		<rect width='100' height='50' rx='45' ry='20' y='150' x='30' fill='rgb(240, 255, 240, 0)' v-bind:class="third"/>
-
-		<rect width='100' height='50' rx='45' ry='20' y='130' x='30' fill='rgb(245, 222, 179, 0)' v-bind:class="fourth"/>
-
-		<rect width='100' height='50' rx='45' ry='20' y='110' x='30' fill='rgb(245, 245, 245, 0)' v-bind:class="fifth"/>
-
-		<rect width='100' height='50' rx='45' ry='20' y='90' x='30' fill='rgb(188, 143, 143, 0)' v-bind:class="sixth"/>
-		
-		<g class='steam' v-if='ready'>
-		<ellipse cx='80' cy='10' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
-		<ellipse cx='60' cy='10' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
-		<ellipse cx='80' cy='30' rx='20' ry='10' fill='rgb(211, 211, 211, 0.5)'/>
-		<ellipse cx='80' cy='40' rx='10' ry='5' fill='rgb(211, 211, 211, 0.5)'/>
-		<ellipse cx='60' cy='20' rx='10' ry='5' fill='rgb(211, 211, 211, 0.5)'/>
-		</g>
-
-		</svg>
-	  </el-main>
-      <el-footer>
-	  Ingredients: espresso, milk, honey, mint, chocolate, orangeJuice. You can experiment with the colors :)
-	  </el-footer>
-    </el-container>
-  </el-container>
-</el-container>
+							</svg>
+						</el-main>
+						<el-footer>
+							Ingredients: espresso, milk, honey, mint, chocolate, orangeJuice. You can experiment with the colors :)
+						</el-footer>
+					</el-container>
+				</el-container>
+		</el-container>
 
 <script>
     var app = new Vue({
@@ -189,11 +188,10 @@
 export default {
   data() {
     return {
-      input: ''
+      input: ""
     }
   }
 }
 </script>
-<script src="gameOfColors.js"></script>
 </body>
 </html>
